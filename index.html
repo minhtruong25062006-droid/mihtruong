@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top sản phẩm đáng mua | Góc Review</title>
+    <meta name="description" content="Tổng hợp những món đồ hữu ích, đẹp và đáng tiền được mình chọn lọc.">
+    
+    <!-- Open Graph cho Facebook/Zalo -->
+    <meta property="og:title" content="Top sản phẩm đáng mua">
+    <meta property="og:description" content="Khám phá các deal tốt nhất hôm nay!">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Boxicons (Icons) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Header / Profile -->
+    <header class="profile-section">
+        <div class="avatar-container">
+            <img id="profile-avatar" src="" alt="Avatar" class="avatar">
+            <div class="verified-badge"><i class='bx bxs-check-circle'></i></div>
+        </div>
+        <h1 id="profile-name">Tên Thương Hiệu</h1>
+        <p id="profile-desc">Mô tả ngắn gọn về bạn...</p>
+        
+        <div class="social-links" id="social-container">
+            <!-- Render từ JS -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Những sản phẩm mình thấy đáng mua nhất 🔥</h2>
+        <p>Khám phá những món đồ hữu ích, đẹp và đáng tiền được mình chọn lọc mỗi ngày.</p>
+        <button class="btn-primary" onclick="document.getElementById('products-section').scrollIntoView({behavior: 'smooth'})">
+            Xem sản phẩm nổi bật <i class='bx bx-down-arrow-alt'></i>
+        </button>
+    </section>
+
+    <!-- Flash Deal Section -->
+    <section class="deal-section">
+        <div class="deal-header">
+            <h3>⚡ Deal Đáng Chú Ý</h3>
+            <div class="countdown" id="countdown">00:00:00</div>
+        </div>
+        <div class="deal-card" id="featured-deal">
+            <!-- Render từ JS -->
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section id="products-section" class="products-section">
+        
+        <!-- Search -->
+        <div class="search-box">
+            <i class='bx bx-search'></i>
+            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+
+        <!-- Categories -->
+        <div class="category-scroll">
+            <div class="category-list" id="category-container">
+                <!-- Render từ JS -->
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-container">
+            <!-- Render từ JS -->
+        </div>
+        
+        <div id="no-result" class="no-result hidden">
+            <i class='bx bx-box'></i>
+            <p>Không tìm thấy sản phẩm nào.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3 id="footer-name">Tên Thương Hiệu</h3>
+        <p>Cảm ơn bạn đã ủng hộ!</p>
+        <div class="footer-socials" id="footer-social-container">
+            <!-- Render từ JS -->
+        </div>
+        <div class="disclaimer">
+            <strong>Minh bạch:</strong> Các liên kết sản phẩm trên trang là liên kết tiếp thị (affiliate). Tôi có thể nhận được hoa hồng nếu bạn mua hàng thông qua liên kết này, điều này không làm tăng chi phí của bạn.
+        </div>
+        <div class="copyright">
+            &copy; <span id="year"></span> Bản quyền thuộc về <span id="copy-name"></span>.
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Lên đầu trang"><i class='bx bx-up-arrow-alt'></i></button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

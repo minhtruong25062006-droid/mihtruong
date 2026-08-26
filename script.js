@@ -1,5 +1,5 @@
 // =========================================================
-// ⚙️ CẤU HÌNH WEBSITE
+// ⚙️ CẤU HÌNH WEBSITE (CONFIG)
 // =========================================================
 
 // 👉 ĐỔI TÊN WEBSITE Ở ĐÂY
@@ -14,62 +14,52 @@ const siteConfig = {
     avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300",
     bio: "Tổng hợp những sản phẩm hữu ích và đáng mua.",
     socials: {
-        tiktok: "",
-        facebook: "",
-        instagram: "",
-        youtube: ""
+        tiktok: "https://tiktok.com",
+        facebook: "https://facebook.com",
+        instagram: "https://instagram.com",
+        youtube: "" // Để trống ("") nếu không sử dụng
     }
 };
 
 // =========================================================
-// 🛒 DANH SÁCH SẢN PHẨM
+// 🛒 DANH SÁCH SẢN PHẨM (PRODUCTS)
 // =========================================================
-//
-// Muốn thêm sản phẩm:
-// → copy một object
-//
-// Muốn đổi tên:
-// → sửa name
-//
-// Muốn đổi ảnh:
-// → sửa image
-//
-// Muốn đổi giá:
-// → sửa price
-//
-// ⭐ MUỐN GẮN LINK AFFILIATE:
-// → sửa affiliateLink
-//
-// 🔗 LINK AFFILIATE
-// DÁN LINK AFFILIATE CỦA SẢN PHẨM VÀO ĐÂY
+// Muốn thêm sản phẩm: → copy một object {}
+// Muốn đổi tên:       → sửa name
+// Muốn đổi ảnh:       → sửa image
+// Muốn đổi giá:       → sửa price
+// ⭐ MUỐN GẮN LINK:   → sửa affiliateLink
 // =========================================================
 
 const products = [
     {
         id: 1,
-        featured: true,
+        featured: true, // 👉 Đổi thành true để làm Sản phẩm nổi bật
         name: "[DỮ LIỆU DEMO] Bàn phím cơ Custom Trục Đỏ",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        description: "Gõ siêu êm, có LED RGB, layout 75% gọn gàng.",
         image: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500",
         price: "450.000đ",
         oldPrice: "600.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-25%",
+        badge: "HOT",
         rating: 4.9,
         reviews: 120,
         category: "cong-nghe",
+        
+        // 🔗 LINK AFFILIATE
+        // DÁN LINK AFFILIATE CỦA SẢN PHẨM VÀO ĐÂY
         affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
     },
     {
         id: 2,
         featured: false,
-        name: "[DỮ LIỆU DEMO] Chuột Gaming Không Dây",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        name: "[DỮ LIỆU DEMO] Chuột Gaming Không Dây Silent",
+        description: "Độ trễ thấp, click không tiếng ồn, pin sạc Type-C.",
         image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500",
         price: "150.000đ",
         oldPrice: "250.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-40%",
+        badge: "NEW",
         rating: 4.8,
         reviews: 340,
         category: "gaming",
@@ -79,12 +69,12 @@ const products = [
         id: 3,
         featured: false,
         name: "[DỮ LIỆU DEMO] Tai nghe Bluetooth Chống Ồn",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        description: "Pin 24h, đệm tai êm ái, âm bass mạnh mẽ.",
         image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
         price: "299.000đ",
         oldPrice: "499.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-40%",
+        badge: "",
         rating: 4.7,
         reviews: 215,
         category: "cong-nghe",
@@ -93,13 +83,13 @@ const products = [
     {
         id: 4,
         featured: false,
-        name: "[DỮ LIỆU DEMO] Giá Đỡ Điện Thoại Hợp Kim",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        name: "[DỮ LIỆU DEMO] Giá Đỡ Điện Thoại/Tablet Hợp Kim",
+        description: "Gấp gọn dễ dàng, mang đi học đi cafe rất tiện.",
         image: "https://images.unsplash.com/photo-1586521995568-39abaa0c2311?w=500",
         price: "55.000đ",
         oldPrice: "100.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-45%",
+        badge: "SALE",
         rating: 5.0,
         reviews: 890,
         category: "hoc-tap",
@@ -108,13 +98,13 @@ const products = [
     {
         id: 5,
         featured: false,
-        name: "[DỮ LIỆU DEMO] Đèn LED Bàn Học",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        name: "[DỮ LIỆU DEMO] Đèn LED Bàn Học Bảo Vệ Mắt",
+        description: "Chống cận, 3 chế độ sáng, có hộp cắm bút.",
         image: "https://images.unsplash.com/photo-1563241527-3004b7be0188?w=500",
         price: "120.000đ",
         oldPrice: "180.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-33%",
+        badge: "",
         rating: 4.8,
         reviews: 156,
         category: "hoc-tap",
@@ -124,12 +114,12 @@ const products = [
         id: 6,
         featured: false,
         name: "[DỮ LIỆU DEMO] Hub USB Type-C 5 in 1",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        description: "Mở rộng cổng kết nối cho Laptop, vỏ nhôm tản nhiệt.",
         image: "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=500",
         price: "180.000đ",
         oldPrice: "250.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-28%",
+        badge: "",
         rating: 4.6,
         reviews: 88,
         category: "cong-nghe",
@@ -138,13 +128,13 @@ const products = [
     {
         id: 7,
         featured: false,
-        name: "[DỮ LIỆU DEMO] Túi Đeo Chéo Canvas",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        name: "[DỮ LIỆU DEMO] Túi Đeo Chéo Canvas Nam Nữ",
+        description: "Vải dày dặn, form rộng đựng vừa iPad và sổ tay.",
         image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500",
         price: "99.000đ",
         oldPrice: "150.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-34%",
+        badge: "TREND",
         rating: 4.9,
         reviews: 420,
         category: "thoi-trang",
@@ -153,13 +143,13 @@ const products = [
     {
         id: 8,
         featured: false,
-        name: "[DỮ LIỆU DEMO] Bình Giữ Nhiệt Inox 304",
-        description: "Mô tả sản phẩm dùng để minh họa.",
+        name: "[DỮ LIỆU DEMO] Bình Giữ Nhiệt Inox 304 750ml",
+        description: "Giữ đá 24h, thiết kế trơn thanh lịch, tặng kèm ống hút.",
         image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
         price: "110.000đ",
         oldPrice: "190.000đ",
-        discount: "DEMO",
-        badge: "DEMO",
+        discount: "-42%",
+        badge: "",
         rating: 4.8,
         reviews: 512,
         category: "gia-dung",
@@ -167,6 +157,9 @@ const products = [
     }
 ];
 
+// =========================================================
+// 🏷️ DANH MỤC SẢN PHẨM (CATEGORIES)
+// =========================================================
 const categories = [
     { id: "all", name: "🔥 Tất cả" },
     { id: "cong-nghe", name: "💻 Công nghệ" },
@@ -177,72 +170,67 @@ const categories = [
 ];
 
 // =========================================================
-// ⚙️ LOGIC XỬ LÝ (KHÔNG SỬA PHẦN NÀY)
+// 🔄 STATE (TRẠNG THÁI ỨNG DỤNG)
 // =========================================================
+const state = {
+    currentCategory: "all",
+    currentSearch: ""
+};
 
-let currentCategory = "all";
-let currentSearch = "";
-
-// Cập nhật text an toàn
-function setElementText(id, text) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = text;
-}
-
-// 1. Khởi tạo Profile
+// =========================================================
+// 👤 PROFILE RENDER
+// =========================================================
 function initProfile() {
     document.title = `${siteConfig.siteName} | Top Sản Phẩm`;
     
-    setElementText('profile-name', siteConfig.siteName);
-    setElementText('profile-username', siteConfig.username);
-    setElementText('profile-bio', siteConfig.bio);
-    setElementText('footer-name', siteConfig.siteName);
-    setElementText('current-year', new Date().getFullYear());
+    const setText = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    };
 
-    const avatarImg = document.getElementById('profile-avatar');
-    if (avatarImg) {
-        avatarImg.src = siteConfig.avatar;
-        avatarImg.onerror = function() { 
-            this.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22150%22%20height%3D%22150%22%20viewBox%3D%220%200%20150%20150%22%3E%3Crect%20fill%3D%22%23ddd%22%20width%3D%22150%22%20height%3D%22150%22%2F%3E%3Ctext%20fill%3D%22%23999%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%3EAvatar%3C%2Ftext%3E%3C%2Fsvg%3E'; 
+    setText('profile-name', siteConfig.siteName);
+    setText('profile-username', siteConfig.username);
+    setText('profile-bio', siteConfig.bio);
+    setText('footer-name', siteConfig.siteName);
+    setText('current-year', new Date().getFullYear());
+
+    const avatarEl = document.getElementById('profile-avatar');
+    if (avatarEl) {
+        avatarEl.src = siteConfig.avatar;
+        // Xử lý lỗi ảnh an toàn (Base64 SVG)
+        avatarEl.onerror = function() {
+            this.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e5e7eb'/%3E%3Cpath d='M50 55c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20zm0 5c15 0 30 7.5 30 22.5V90H20v-7.5C20 67.5 35 60 50 60z' fill='%239ca3af'/%3E%3C/svg%3E";
         };
     }
 
+    // Render Socials
     const socialHTML = [];
-    if (siteConfig.socials.tiktok) socialHTML.push(`<a href="${siteConfig.socials.tiktok}" target="_blank" rel="noopener"><i class='bx bxl-tiktok'></i></a>`);
-    if (siteConfig.socials.facebook) socialHTML.push(`<a href="${siteConfig.socials.facebook}" target="_blank" rel="noopener"><i class='bx bxl-facebook-circle'></i></a>`);
-    if (siteConfig.socials.instagram) socialHTML.push(`<a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i></a>`);
-    if (siteConfig.socials.youtube) socialHTML.push(`<a href="${siteConfig.socials.youtube}" target="_blank" rel="noopener"><i class='bx bxl-youtube'></i></a>`);
+    if (siteConfig.socials.tiktok) socialHTML.push(`<a href="${siteConfig.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>`);
+    if (siteConfig.socials.facebook) socialHTML.push(`<a href="${siteConfig.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>`);
+    if (siteConfig.socials.instagram) socialHTML.push(`<a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>`);
+    if (siteConfig.socials.youtube) socialHTML.push(`<a href="${siteConfig.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>`);
     
     const socialContainer = document.getElementById('social-container');
     if (socialContainer) socialContainer.innerHTML = socialHTML.join('');
 }
 
-// 2. Click Tracking
-function trackClick(productId) {
-    try {
-        let clicks = JSON.parse(localStorage.getItem('affiliate_clicks') || '{}');
-        clicks[productId] = (clicks[productId] || 0) + 1;
-        localStorage.setItem('affiliate_clicks', JSON.stringify(clicks));
-    } catch(e) {
-        // Bỏ qua lỗi một cách an toàn
-    }
-}
-
-// 3. Render Card HTML
+// =========================================================
+// 📦 PRODUCT RENDER
+// =========================================================
 function createCardHTML(p, isFeatured = false) {
     const badgeHTML = p.badge ? `<div class="p-badge">${p.badge}</div>` : '';
     const oldPriceHTML = p.oldPrice ? `<span class="p-old">${p.oldPrice}</span>` : '';
-    const discountHTML = p.discount ? `<span class="p-discount" style="color: #ef4444; font-size: 12px; margin-left: 4px;">${p.discount}</span>` : '';
-    const featureLabel = isFeatured ? `<span class="featured-label" style="display:block; color:#ef4444; font-size:12px; font-weight:700; margin-bottom:8px;">🔥 SẢN PHẨM NỔI BẬT</span>` : '';
+    const discountHTML = p.discount ? `<span class="p-discount">${p.discount}</span>` : '';
+    const featureLabel = isFeatured ? `<span class="featured-label">🔥 SẢN PHẨM NỔI BẬT</span>` : '';
     
-    // Fallback ảnh an toàn, không để vỡ
-    const fallbackImage = `this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22300%22%20viewBox%3D%220%200%20300%20300%22%3E%3Crect%20fill%3D%22%23eee%22%20width%3D%22300%22%20height%3D%22300%22%2F%3E%3Ctext%20fill%3D%22%23ccc%22%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%3ELỗi%20Ảnh%3C%2Ftext%3E%3C%2Fsvg%3E'`;
+    // Fallback ảnh Base64 gọn nhẹ
+    const fallbackImage = `this.onerror=null; this.src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Crect width='300' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%239ca3af'%3ELỗi Ảnh%3C/text%3E%3C/svg%3E"`;
 
     return `
-        <a href="#" class="product-card track-affiliate ${isFeatured ? 'featured-card' : ''}" data-id="${p.id}" data-link="${p.affiliateLink}">
+        <a href="#" class="product-card track-affiliate ${isFeatured ? 'featured-card' : ''}" data-id="${p.id}" data-link="${p.affiliateLink}" aria-label="Xem sản phẩm ${p.name}">
             <div class="p-img">
                 ${badgeHTML}
-                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="${fallbackImage}">
+                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror='${fallbackImage}'>
             </div>
             <div class="p-info">
                 ${featureLabel}
@@ -261,17 +249,6 @@ function createCardHTML(p, isFeatured = false) {
     `;
 }
 
-// 4. Render Danh mục
-function renderCategories() {
-    const container = document.getElementById('category-container');
-    if (!container) return;
-    
-    container.innerHTML = categories.map(c => 
-        `<li><button class="cat-btn ${c.id === currentCategory ? 'active' : ''}" data-id="${c.id}">${c.name}</button></li>`
-    ).join('');
-}
-
-// 5. Render Sản phẩm & Lọc
 function renderProducts() {
     const grid = document.getElementById('product-container');
     const featured = document.getElementById('featured-container');
@@ -279,11 +256,11 @@ function renderProducts() {
     
     if (!grid || !featured || !noResult) return;
 
-    const term = currentSearch.trim().toLowerCase();
+    const term = state.currentSearch.trim().toLowerCase();
     
-    // Lọc theo keyword & category
+    // Lọc sản phẩm
     const filtered = products.filter(p => {
-        const matchCat = currentCategory === 'all' || p.category === currentCategory;
+        const matchCat = state.currentCategory === 'all' || p.category === state.currentCategory;
         const matchSearch = p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term);
         return matchCat && matchSearch;
     });
@@ -292,14 +269,11 @@ function renderProducts() {
         grid.innerHTML = ''; 
         featured.innerHTML = '';
         noResult.classList.remove('hidden');
-        noResult.style.display = 'block';
         return;
     }
-    
     noResult.classList.add('hidden');
-    noResult.style.display = 'none';
 
-    // Tách riêng featured product để không render trùng
+    // Tách Featured Product
     const featuredProduct = filtered.find(p => p.featured === true);
     const normalProducts = filtered.filter(p => p !== featuredProduct);
 
@@ -307,66 +281,88 @@ function renderProducts() {
     grid.innerHTML = normalProducts.map(p => createCardHTML(p, false)).join('');
 }
 
+// =========================================================
+// 🏷️ CATEGORY RENDER
+// =========================================================
+function renderCategories() {
+    const container = document.getElementById('category-container');
+    if (!container) return;
+    
+    container.innerHTML = categories.map(c => 
+        `<li><button class="cat-btn ${c.id === state.currentCategory ? 'active' : ''}" data-id="${c.id}" aria-label="Lọc theo ${c.name}">${c.name}</button></li>`
+    ).join('');
+}
 
 // =========================================================
-// 🚀 KHỞI TẠO DUY NHẤT (MỘT DOMContentLoaded)
+// 🔗 AFFILIATE & TRACKING
 // =========================================================
+function handleAffiliateClick(e) {
+    const card = e.target.closest('.track-affiliate');
+    if (!card) return;
 
+    e.preventDefault(); 
+    const link = card.getAttribute('data-link');
+    const pId = card.getAttribute('data-id');
+    
+    if (!link || link.trim() === "" || link === "DÁN_LINK_AFFILIATE_VÀO_ĐÂY") {
+        alert("Link sản phẩm chưa được cập nhật.");
+        return;
+    }
+
+    // Ghi nhận Click cục bộ (LocalStorage)
+    try {
+        let clicks = JSON.parse(localStorage.getItem('affiliate_clicks') || '{}');
+        clicks[pId] = (clicks[pId] || 0) + 1;
+        localStorage.setItem('affiliate_clicks', JSON.stringify(clicks));
+    } catch(err) { /* An toàn bỏ qua */ }
+
+    // Mở Link Affiliate
+    window.open(link, '_blank', 'noopener,noreferrer,sponsored');
+}
+
+// =========================================================
+// 🚀 INITIALIZATION (GỌI DUY NHẤT 1 LẦN)
+// =========================================================
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Chạy các hàm render UI cơ bản
+    // 1. Render Giao Diện
     initProfile();
     renderCategories();
     renderProducts();
 
-    // 1. Lắng nghe ô Search
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            currentSearch = e.target.value;
-            renderProducts();
-        });
-    }
-
-    // 2. Lắng nghe Event Delegation (Quản lý Click Danh mục & Sản phẩm)
+    // 2. Event Delegation: Xử lý Click Tổng hợp trên Body
     document.body.addEventListener('click', (e) => {
         
-        // --- Xử lý click Category ---
+        // Clicks Category
         const catBtn = e.target.closest('.cat-btn');
         if (catBtn) {
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             catBtn.classList.add('active');
-            currentCategory = catBtn.getAttribute('data-id');
+            state.currentCategory = catBtn.getAttribute('data-id');
             renderProducts();
             return;
         }
 
-        // --- Xử lý click Affiliate Link ---
-        const card = e.target.closest('.track-affiliate');
-        if (card) {
-            e.preventDefault(); 
-            const link = card.getAttribute('data-link');
-            const pId = card.getAttribute('data-id');
-            
-            if (!link || link.trim() === "" || link === "DÁN_LINK_AFFILIATE_VÀO_ĐÂY") {
-                alert("Link sản phẩm chưa được cập nhật.");
-            } else {
-                trackClick(pId);
-                window.open(link, '_blank', 'noopener,noreferrer,nofollow,sponsored');
-            }
-        }
+        // Clicks Affiliate Card
+        handleAffiliateClick(e);
     });
 
-    // 3. Lắng nghe Dark Mode
+    // 3. Xử lý Search
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            state.currentSearch = e.target.value;
+            renderProducts();
+        });
+    }
+
+    // 4. Xử lý Dark Mode
     const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
-        // Kiểm tra state cũ
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-theme');
             themeBtn.innerHTML = "<i class='bx bx-sun'></i>";
         }
-        
-        // Đổi theme
         themeBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
             const isDark = document.body.classList.contains('dark-theme');
@@ -375,21 +371,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // 4. Lắng nghe Back to Top
+    // 5. Xử lý Back to Top
     const bttBtn = document.getElementById('back-to-top');
     if (bttBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 bttBtn.classList.add('show');
-                bttBtn.style.opacity = '1';
-                bttBtn.style.visibility = 'visible';
             } else {
                 bttBtn.classList.remove('show');
-                bttBtn.style.opacity = '0';
-                bttBtn.style.visibility = 'hidden';
             }
         });
-        
         bttBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });

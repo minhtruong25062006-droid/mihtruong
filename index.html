@@ -2,106 +2,114 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top sản phẩm đáng mua | Góc Review</title>
-    <meta name="description" content="Tổng hợp những món đồ hữu ích, đẹp và đáng tiền được mình chọn lọc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Top sản phẩm đáng mua</title>
+    <meta name="description" content="Khám phá các sản phẩm công nghệ, gaming, gia dụng và những món đồ hữu ích đáng để bạn tham khảo.">
     
-    <!-- Open Graph cho Facebook/Zalo -->
+    <!-- SEO & Open Graph -->
     <meta property="og:title" content="Top sản phẩm đáng mua">
     <meta property="og:description" content="Khám phá các deal tốt nhất hôm nay!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200">
     <meta property="og:type" content="website">
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Boxicons (Icons) -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-    <!-- Header / Profile -->
-    <header class="profile-section">
-        <div class="avatar-container">
-            <img id="profile-avatar" src="" alt="Avatar" class="avatar">
-            <div class="verified-badge"><i class='bx bxs-check-circle'></i></div>
-        </div>
-        <h1 id="profile-name">Tên Thương Hiệu</h1>
-        <p id="profile-desc">Mô tả ngắn gọn về bạn...</p>
-        
-        <div class="social-links" id="social-container">
-            <!-- Render từ JS -->
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h2>Những sản phẩm mình thấy đáng mua nhất 🔥</h2>
-        <p>Khám phá những món đồ hữu ích, đẹp và đáng tiền được mình chọn lọc mỗi ngày.</p>
-        <button class="btn-primary" onclick="document.getElementById('products-section').scrollIntoView({behavior: 'smooth'})">
-            Xem sản phẩm nổi bật <i class='bx bx-down-arrow-alt'></i>
+    <div class="app-container">
+        <!-- Nút Dark Mode -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Đổi giao diện">
+            <i class='bx bx-moon'></i>
         </button>
-    </section>
 
-    <!-- Flash Deal Section -->
-    <section class="deal-section">
-        <div class="deal-header">
-            <h3>⚡ Deal Đáng Chú Ý</h3>
-            <div class="countdown" id="countdown">00:00:00</div>
-        </div>
-        <div class="deal-card" id="featured-deal">
-            <!-- Render từ JS -->
-        </div>
-    </section>
-
-    <!-- Main Products Section -->
-    <section id="products-section" class="products-section">
-        
-        <!-- Search -->
-        <div class="search-box">
-            <i class='bx bx-search'></i>
-            <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
-        </div>
-
-        <!-- Categories -->
-        <div class="category-scroll">
-            <div class="category-list" id="category-container">
-                <!-- Render từ JS -->
+        <!-- Header / Profile Section -->
+        <header class="profile-section">
+            <div class="avatar-wrap">
+                <img id="profile-avatar" src="" alt="Avatar" class="avatar">
+                <div class="verified-badge"><i class='bx bxs-badge-check'></i></div>
             </div>
-        </div>
+            <h1 id="profile-name">Tên thương hiệu</h1>
+            <p id="profile-username" class="username">@username</p>
+            <p id="profile-bio" class="bio">Mô tả ngắn gọn...</p>
+            
+            <div class="social-links" id="social-container">
+                <!-- Render bằng JS -->
+            </div>
+        </header>
 
-        <!-- Product Grid -->
-        <div class="product-grid" id="product-container">
-            <!-- Render từ JS -->
-        </div>
-        
-        <div id="no-result" class="no-result hidden">
-            <i class='bx bx-box'></i>
-            <p>Không tìm thấy sản phẩm nào.</p>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h2>Những món đồ đáng mua mình đã chọn lọc 🔥</h2>
+            <p>Sản phẩm chất lượng cao, giá tốt và hữu ích cho góc học tập, làm việc.</p>
+            <button class="btn-primary hero-btn" onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
+                🔥 Xem sản phẩm nổi bật
+            </button>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <h3 id="footer-name">Tên Thương Hiệu</h3>
-        <p>Cảm ơn bạn đã ủng hộ!</p>
-        <div class="footer-socials" id="footer-social-container">
-            <!-- Render từ JS -->
-        </div>
-        <div class="disclaimer">
-            <strong>Minh bạch:</strong> Các liên kết sản phẩm trên trang là liên kết tiếp thị (affiliate). Tôi có thể nhận được hoa hồng nếu bạn mua hàng thông qua liên kết này, điều này không làm tăng chi phí của bạn.
-        </div>
-        <div class="copyright">
-            &copy; <span id="year"></span> Bản quyền thuộc về <span id="copy-name"></span>.
-        </div>
-    </footer>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Search -->
+            <div class="search-container">
+                <i class='bx bx-search search-icon'></i>
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm (vd: bàn phím, giá đỡ)..." aria-label="Tìm kiếm">
+            </div>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Lên đầu trang"><i class='bx bx-up-arrow-alt'></i></button>
+            <!-- Categories (Horizontal Scroll) -->
+            <nav class="category-nav">
+                <ul class="category-list" id="category-container">
+                    <!-- Render bằng JS -->
+                </ul>
+            </nav>
+
+            <!-- Featured Product -->
+            <div id="featured-container" class="featured-wrapper">
+                <!-- Render bằng JS -->
+            </div>
+
+            <!-- Product Grid -->
+            <section class="product-grid" id="product-container">
+                <!-- Render bằng JS -->
+            </section>
+
+            <!-- No Result State -->
+            <div id="no-result" class="no-result hidden">
+                <i class='bx bx-box'></i>
+                <p>Không tìm thấy sản phẩm phù hợp.</p>
+            </div>
+        </main>
+
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <h3>✨ Vì sao mình chọn các sản phẩm này?</h3>
+            <ul>
+                <li><i class='bx bx-check-circle'></i> Chọn lọc sản phẩm đáng chú ý</li>
+                <li><i class='bx bx-check-circle'></i> Ưu tiên sản phẩm có đánh giá tốt</li>
+                <li><i class='bx bx-check-circle'></i> Cập nhật sản phẩm thường xuyên</li>
+                <li><i class='bx bx-check-circle'></i> Link dẫn trực tiếp đến nơi bán chính hãng</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="affiliate-disclosure">
+                <strong>Minh bạch:</strong> Một số liên kết trên trang có thể là liên kết tiếp thị liên kết (affiliate). Nếu bạn mua hàng thông qua liên kết, mình có thể nhận được một khoản hoa hồng nhỏ mà không làm tăng chi phí của bạn.
+            </div>
+            <p class="copyright">
+                &copy; <span id="current-year"></span> <span id="footer-name"></span>. Tối ưu cho Mobile.
+            </p>
+        </footer>
+
+        <!-- Back to Top -->
+        <button id="back-to-top" aria-label="Lên đầu trang"><i class='bx bx-up-arrow-alt'></i></button>
+    </div>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

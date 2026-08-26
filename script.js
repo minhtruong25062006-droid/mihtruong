@@ -7,17 +7,17 @@
 const CONFIG = {
     // 1. THÔNG TIN CÁ NHÂN / THƯƠNG HIỆU
     profile: {
-        name: "Nguyễn Văn A", // Tên hiển thị trên cùng
+        name: "Minh Trường", // Tên hiển thị trên cùng
         description: "Review • Gợi ý • Deal tốt mỗi ngày", // Mô tả ngắn
         
         // 👉 THAY LINK ẢNH AVATAR TẠI ĐÂY (Có thể lấy link ảnh từ Facebook/Insta)
-        avatar: "https://i.pravatar.cc/300" 
+        avatar: "https://cdn.phototourl.com/free/2026-08-26-29759525-d139-4d54-9661-79ed814c1d2e.jpg" 
     },
 
     // 2. MẠNG XÃ HỘI (Để trống "" nếu không có)
     socials: {
-        tiktok: "https://tiktok.com",
-        facebook: "https://facebook.com",
+        tiktok: "https://www.tiktok.com/@minhtruong256_?_r=1&_t=ZS-99C33GnUuW7",
+        facebook: "https://www.facebook.com/share/1DQBjKnseu/",
         instagram: "https://instagram.com"
     },
 

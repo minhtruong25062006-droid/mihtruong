@@ -6,19 +6,18 @@
     <title>Top sản phẩm đáng mua</title>
     <meta name="description" content="Khám phá các sản phẩm công nghệ, gaming, gia dụng và những món đồ hữu ích đáng để bạn tham khảo.">
     
-    <!-- SEO & Open Graph -->
+    <!-- Open Graph SEO -->
     <meta property="og:title" content="Top sản phẩm đáng mua">
-    <meta property="og:description" content="Khám phá các deal tốt nhất hôm nay!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200">
+    <meta property="og:description" content="Tổng hợp những sản phẩm hữu ích và đáng mua.">
     <meta property="og:type" content="website">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -26,22 +25,22 @@
 <body>
     <div class="app-container">
         <!-- Nút Dark Mode -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Đổi giao diện">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Bật/Tắt giao diện tối">
             <i class='bx bx-moon'></i>
         </button>
 
-        <!-- Header / Profile Section -->
+        <!-- Profile Section -->
         <header class="profile-section">
             <div class="avatar-wrap">
                 <img id="profile-avatar" src="" alt="Avatar" class="avatar">
-                <div class="verified-badge"><i class='bx bxs-badge-check'></i></div>
+                <div class="verified-badge" aria-label="Đã xác minh"><i class='bx bxs-badge-check'></i></div>
             </div>
             <h1 id="profile-name">Tên thương hiệu</h1>
             <p id="profile-username" class="username">@username</p>
             <p id="profile-bio" class="bio">Mô tả ngắn gọn...</p>
             
             <div class="social-links" id="social-container">
-                <!-- Render bằng JS -->
+                <!-- Social links render here -->
             </div>
         </header>
 
@@ -49,37 +48,37 @@
         <section class="hero-section">
             <h2>Những món đồ đáng mua mình đã chọn lọc 🔥</h2>
             <p>Sản phẩm chất lượng cao, giá tốt và hữu ích cho góc học tập, làm việc.</p>
-            <button class="btn-primary hero-btn" onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
+            <button class="btn-primary" aria-label="Xem sản phẩm nổi bật" onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
                 🔥 Xem sản phẩm nổi bật
             </button>
         </section>
 
         <!-- Main Content -->
         <main id="main-content">
-            <!-- Search -->
+            <!-- Search Box -->
             <div class="search-container">
                 <i class='bx bx-search search-icon'></i>
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm (vd: bàn phím, giá đỡ)..." aria-label="Tìm kiếm">
+                <input type="text" id="search-input" placeholder="Tìm sản phẩm (vd: bàn phím, giá đỡ)..." aria-label="Tìm kiếm sản phẩm">
             </div>
 
-            <!-- Categories (Horizontal Scroll) -->
-            <nav class="category-nav">
+            <!-- Categories -->
+            <nav class="category-nav" aria-label="Danh mục sản phẩm">
                 <ul class="category-list" id="category-container">
-                    <!-- Render bằng JS -->
+                    <!-- Categories render here -->
                 </ul>
             </nav>
 
             <!-- Featured Product -->
             <div id="featured-container" class="featured-wrapper">
-                <!-- Render bằng JS -->
+                <!-- Featured product render here -->
             </div>
 
             <!-- Product Grid -->
-            <section class="product-grid" id="product-container">
-                <!-- Render bằng JS -->
+            <section class="product-grid" id="product-container" aria-label="Danh sách sản phẩm">
+                <!-- Products render here -->
             </section>
 
-            <!-- No Result State -->
+            <!-- No Results -->
             <div id="no-result" class="no-result hidden">
                 <i class='bx bx-box'></i>
                 <p>Không tìm thấy sản phẩm phù hợp.</p>
@@ -93,7 +92,7 @@
                 <li><i class='bx bx-check-circle'></i> Chọn lọc sản phẩm đáng chú ý</li>
                 <li><i class='bx bx-check-circle'></i> Ưu tiên sản phẩm có đánh giá tốt</li>
                 <li><i class='bx bx-check-circle'></i> Cập nhật sản phẩm thường xuyên</li>
-                <li><i class='bx bx-check-circle'></i> Link dẫn trực tiếp đến nơi bán chính hãng</li>
+                <li><i class='bx bx-check-circle'></i> Dẫn link trực tiếp đến nơi bán để bạn tự kiểm tra</li>
             </ul>
         </section>
 
@@ -103,12 +102,14 @@
                 <strong>Minh bạch:</strong> Một số liên kết trên trang có thể là liên kết tiếp thị liên kết (affiliate). Nếu bạn mua hàng thông qua liên kết, mình có thể nhận được một khoản hoa hồng nhỏ mà không làm tăng chi phí của bạn.
             </div>
             <p class="copyright">
-                &copy; <span id="current-year"></span> <span id="footer-name"></span>. Tối ưu cho Mobile.
+                &copy; <span id="current-year"></span> <span id="footer-name"></span>. Designed for Mobile.
             </p>
         </footer>
 
         <!-- Back to Top -->
-        <button id="back-to-top" aria-label="Lên đầu trang"><i class='bx bx-up-arrow-alt'></i></button>
+        <button id="back-to-top" class="back-to-top" aria-label="Lên đầu trang">
+            <i class='bx bx-up-arrow-alt'></i>
+        </button>
     </div>
 
     <!-- JavaScript -->

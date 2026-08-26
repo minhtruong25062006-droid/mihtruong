@@ -3,26 +3,24 @@
 // 👉 CHỈNH THÔNG TIN WEBSITE TẠI ĐÂY
 // ====================================
 const siteConfig = {
-    siteName: "Góc của Trường",
-    username: "@minhtruong2506",
-    
-    // 👉 ĐỔI AVATAR (Dán link ảnh của bạn vào)
-    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300",
-    
-    bio: "Sinh viên IT đam mê công nghệ. Cùng mình khám phá những công cụ học tập và setup cực chất nhé!",
-    
+    siteName: "Minh Trường",
+    username: "@minhtruong",
+    // 🖼️ LINK ẢNH AVATAR
+    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300", 
+    bio: "Tổng hợp những sản phẩm hữu ích và đáng mua.",
     socials: {
-        tiktok: "https://tiktok.com/@minhtruong2506",
+        tiktok: "https://tiktok.com/@minhtruong",
         facebook: "https://facebook.com",
         instagram: "https://instagram.com",
-        youtube: "" // Bỏ trống nếu không có
+        youtube: "" // Để trống nếu không dùng
     },
-
     categories: [
         { id: "all", name: "🔥 Tất cả" },
-        { id: "cong-nghe", name: "💻 Công nghệ & Setup" },
-        { id: "hoc-tap", name: "📚 Góc Học Tập" },
-        { id: "gia-dung", name: "🏠 Gia dụng tiện ích" }
+        { id: "cong-nghe", name: "💻 Công nghệ" },
+        { id: "gaming", name: "🎮 Gaming" },
+        { id: "gia-dung", name: "🏠 Gia dụng" },
+        { id: "thoi-trang", name: "👕 Thời trang" },
+        { id: "hoc-tap", name: "📚 Học tập" }
     ]
 };
 
@@ -32,114 +30,191 @@ const siteConfig = {
 // ========================================
 const products = [
     {
-        id: "prod_01",
-        isFeatured: true, // Đặt true để hiển thị to ở đầu trang
-        name: "Bàn phím cơ Custom Trục Đỏ (Gõ cực êm)",
-        description: "Cứu tinh cho những đêm gõ code C chạy deadline. Phím nảy, êm ái, LED RGB cực chất.",
+        id: "p1",
+        featured: true, // Hiển thị to ở phần Sản phẩm nổi bật
+        name: "[DEMO] Bàn phím cơ Custom Trục Đỏ",
+        description: "Gõ êm, có LED RGB. Sản phẩm dùng để minh họa.",
+        // 🖼️ LINK ẢNH SẢN PHẨM
+        // 👉 DÁN LINK ẢNH VÀO ĐÂY
         image: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500",
         price: "450.000đ",
-        oldPrice: "750.000đ",
-        badge: "🔥 ĐANG SALE",
+        oldPrice: "600.000đ",
+        discount: "-25%",
+        badge: "🔥 HOT",
         rating: 4.9,
-        reviews: "3.2k",
+        reviews: 120,
         category: "cong-nghe",
-        
-        // ========================================
         // 🔗 LINK AFFILIATE
-        // 👉 DÁN LINK AFFILIATE CỦA BẠN TẠI ĐÂY
-        // ========================================
-        affiliateLink: "https://shopee.vn" 
+        // 👉 DÁN LINK AFFILIATE CỦA SẢN PHẨM VÀO ĐÂY
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
     },
     {
-        id: "prod_02",
-        isFeatured: false,
-        name: "Giá đỡ Laptop Nhôm nguyên khối",
-        description: "Chống gù lưng và mỏi vai gáy. Tản nhiệt cực tốt.",
-        image: "https://images.unsplash.com/photo-1586521995568-39abaa0c2311?w=500",
-        price: "85.000đ",
-        oldPrice: "150.000đ",
-        badge: "⭐ MUST HAVE",
-        rating: 5.0,
-        reviews: "10k+",
-        category: "cong-nghe",
-        affiliateLink: "https://shopee.vn"
-    },
-    {
-        id: "prod_03",
-        isFeatured: false,
-        name: "Sách Hack Não 1500 Từ Tiếng Anh",
-        description: "Giúp người mới bắt đầu nạp từ vựng cực nhanh qua hình ảnh.",
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500",
-        price: "199.000đ",
-        oldPrice: "350.000đ",
-        badge: "BÁN CHẠY",
+        id: "p2",
+        featured: false,
+        name: "[DEMO] Chuột Gaming Không Dây",
+        description: "Độ trễ thấp, vừa vặn tay cầm, click siêu êm.",
+        image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500",
+        price: "150.000đ",
+        oldPrice: "250.000đ",
+        discount: "-40%",
+        badge: "BEST SELLER",
         rating: 4.8,
-        reviews: "2.5k",
+        reviews: 340,
+        category: "gaming",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p3",
+        featured: false,
+        name: "[DEMO] Tai nghe Bluetooth Chống Ồn",
+        description: "Pin trâu 24h, bass đập cực căng, chống ồn chủ động.",
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+        price: "299.000đ",
+        oldPrice: "499.000đ",
+        discount: "-40%",
+        badge: "GIẢM SỐC",
+        rating: 4.7,
+        reviews: 215,
+        category: "cong-nghe",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p4",
+        featured: false,
+        name: "[DEMO] Giá Đỡ Điện Thoại Hợp Kim",
+        description: "Gấp gọn tiện lợi, chống mỏi cổ khi học online.",
+        image: "https://images.unsplash.com/photo-1586521995568-39abaa0c2311?w=500",
+        price: "55.000đ",
+        oldPrice: "100.000đ",
+        discount: "-45%",
+        badge: "RẺ VÔ ĐỊCH",
+        rating: 5.0,
+        reviews: 890,
         category: "hoc-tap",
-        affiliateLink: "https://shopee.vn"
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p5",
+        featured: false,
+        name: "[DEMO] Đèn LED Bàn Học Chống Cận",
+        description: "3 chế độ sáng, bảo vệ mắt, có kẹp bàn tiện lợi.",
+        image: "https://images.unsplash.com/photo-1563241527-3004b7be0188?w=500",
+        price: "120.000đ",
+        oldPrice: "180.000đ",
+        discount: "-33%",
+        badge: "MỚI",
+        rating: 4.8,
+        reviews: 156,
+        category: "hoc-tap",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p6",
+        featured: false,
+        name: "[DEMO] Hub USB Type-C 5 in 1",
+        description: "Mở rộng cổng kết nối cho Laptop, truyền dữ liệu nhanh.",
+        image: "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=500",
+        price: "180.000đ",
+        oldPrice: "250.000đ",
+        discount: "-28%",
+        badge: "",
+        rating: 4.6,
+        reviews: 88,
+        category: "cong-nghe",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p7",
+        featured: false,
+        name: "[DEMO] Túi Đeo Chéo Canvas Basic",
+        description: "Đựng vừa iPad, phong cách trẻ trung năng động.",
+        image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500",
+        price: "99.000đ",
+        oldPrice: "150.000đ",
+        discount: "-34%",
+        badge: "TRENDING",
+        rating: 4.9,
+        reviews: 420,
+        category: "thoi-trang",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
+    },
+    {
+        id: "p8",
+        featured: false,
+        name: "[DEMO] Bình Giữ Nhiệt Inox 304",
+        description: "Giữ đá 24h, kèm ống hút inox, dung tích 750ml.",
+        image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+        price: "110.000đ",
+        oldPrice: "190.000đ",
+        discount: "-42%",
+        badge: "",
+        rating: 4.8,
+        reviews: 512,
+        category: "gia-dung",
+        affiliateLink: "DÁN_LINK_AFFILIATE_VÀO_ĐÂY"
     }
 ];
 
 // ====================================
-// ❌ HẾT PHẦN CẤU HÌNH. 
-// VUI LÒNG KHÔNG SỬA CODE BÊN DƯỚI.
+// ❌ HẾT PHẦN CẤU HÌNH. KHÔNG SỬA CODE BÊN DƯỚI.
 // ====================================
 
 let currentCategory = "all";
 let currentSearch = "";
 
-// 1. Khởi tạo giao diện
-function initSite() {
-    document.title = `${siteConfig.siteName} | Top sản phẩm`;
+// 1. Tải thông tin Profile lên giao diện
+function initProfile() {
+    document.title = `${siteConfig.siteName} | Top Sản Phẩm`;
     document.getElementById('profile-name').textContent = siteConfig.siteName;
     document.getElementById('profile-username').textContent = siteConfig.username;
     document.getElementById('profile-bio').textContent = siteConfig.bio;
-    document.getElementById('footer-name').textContent = siteConfig.siteName;
-    document.getElementById('current-year').textContent = new Date().getFullYear();
     
+    // Gắn Footer
+    document.getElementById('footer-name').textContent = siteConfig.siteName;
+    document.getElementById('current-year').textContent = new Date().getFullYear(); // Tự động lấy năm hiện tại (2026)
+
+    // Xử lý Avatar fallback
     const avatarImg = document.getElementById('profile-avatar');
     avatarImg.src = siteConfig.avatar;
-    avatarImg.onerror = () => { avatarImg.src = 'https://via.placeholder.com/150'; };
+    avatarImg.onerror = function() { this.src = 'https://via.placeholder.com/150'; };
 
-    // Social Links
+    // Gắn icon mạng xã hội
     const socialHTML = [];
-    if(siteConfig.socials.tiktok) socialHTML.push(`<a href="${siteConfig.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>`);
-    if(siteConfig.socials.facebook) socialHTML.push(`<a href="${siteConfig.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>`);
-    if(siteConfig.socials.instagram) socialHTML.push(`<a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>`);
-    if(siteConfig.socials.youtube) socialHTML.push(`<a href="${siteConfig.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>`);
+    if(siteConfig.socials.tiktok) socialHTML.push(`<a href="${siteConfig.socials.tiktok}" target="_blank" rel="noopener"><i class='bx bxl-tiktok'></i></a>`);
+    if(siteConfig.socials.facebook) socialHTML.push(`<a href="${siteConfig.socials.facebook}" target="_blank" rel="noopener"><i class='bx bxl-facebook-circle'></i></a>`);
+    if(siteConfig.socials.instagram) socialHTML.push(`<a href="${siteConfig.socials.instagram}" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i></a>`);
+    if(siteConfig.socials.youtube) socialHTML.push(`<a href="${siteConfig.socials.youtube}" target="_blank" rel="noopener"><i class='bx bxl-youtube'></i></a>`);
     document.getElementById('social-container').innerHTML = socialHTML.join('');
 }
 
-// 2. Click Tracking System (Local Storage)
+// 2. Click Tracking System
 function trackClick(productId) {
     try {
-        let clicks = JSON.parse(localStorage.getItem('product_clicks') || '{}');
+        let clicks = JSON.parse(localStorage.getItem('affiliate_clicks') || '{}');
         clicks[productId] = (clicks[productId] || 0) + 1;
-        localStorage.setItem('product_clicks', JSON.stringify(clicks));
-        console.log('Thống kê Click (Chỉ bạn thấy):', clicks);
-    } catch(e) { console.warn('Lỗi tracking'); }
+        localStorage.setItem('affiliate_clicks', JSON.stringify(clicks));
+    } catch(e) {}
 }
-
-// Lắng nghe sự kiện click vào sản phẩm
-document.addEventListener('click', function(e) {
-    const card = e.target.closest('.track-click');
-    if(card) {
-        trackClick(card.getAttribute('data-id'));
-    }
-});
 
 // 3. Render Card HTML
 function createCardHTML(p, isFeatured = false) {
-    const badge = p.badge ? `<div class="p-badge">${p.badge}</div>` : '';
-    const oldPrice = p.oldPrice ? `<span class="p-old">${p.oldPrice}</span>` : '';
-    const featureLabel = isFeatured ? `<span class="featured-label">🔥 SẢN PHẨM NỔI BẬT</span>` : '';
+    const badgeHTML = p.badge ? `<div class="p-badge">${p.badge}</div>` : '';
+    const oldPriceHTML = p.oldPrice ? `<span class="p-old">${p.oldPrice}</span>` : '';
+    const discountHTML = p.discount ? `<span class="p-discount" style="color: #ef4444; font-size: 12px; margin-left: 4px;">${p.discount}</span>` : '';
+    const featureLabel = isFeatured ? `<span class="featured-label" style="display:block; color:#ef4444; font-size:12px; font-weight:700; margin-bottom:8px;">🔥 SẢN PHẨM NỔI BẬT</span>` : '';
     
-    // YÊU CẦU BẮT BUỘC: target="_blank" rel="nofollow sponsored noopener"
+    // Kiểm tra xem Link đã được gắn thật chưa
+    const isPlaceholderLink = p.affiliateLink === "DÁN_LINK_AFFILIATE_VÀO_ĐÂY" || !p.affiliateLink;
+    
+    // Nếu chưa thay link -> Hiện cảnh báo. Nếu thay rồi -> Mở tab mới với nofollow.
+    const linkHref = isPlaceholderLink ? "javascript:void(0)" : p.affiliateLink;
+    const linkAction = isPlaceholderLink ? `onclick="alert('Link sản phẩm chưa được cập nhật.'); return false;"` : `target="_blank" rel="nofollow sponsored noopener"`;
+
     return `
-        <a href="${p.affiliateLink}" target="_blank" rel="nofollow sponsored noopener" class="product-card track-click ${isFeatured ? 'featured-card' : ''}" data-id="${p.id}">
+        <a href="${linkHref}" ${linkAction} class="product-card track-btn ${isFeatured ? 'featured-card' : ''}" data-id="${p.id}">
             <div class="p-img">
-                ${badge}
-                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300'">
+                ${badgeHTML}
+                <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300?text=Lỗi+Ảnh'">
             </div>
             <div class="p-info">
                 ${featureLabel}
@@ -150,7 +225,7 @@ function createCardHTML(p, isFeatured = false) {
                 </div>
                 <div class="p-prices">
                     <span class="p-price">${p.price}</span>
-                    ${oldPrice}
+                    ${oldPriceHTML} ${discountHTML}
                 </div>
                 <div class="btn-buy">${isFeatured ? 'Xem deal →' : 'Xem sản phẩm →'}</div>
             </div>
@@ -158,7 +233,7 @@ function createCardHTML(p, isFeatured = false) {
     `;
 }
 
-// 4. Render Sản phẩm & Danh mục
+// 4. Khởi tạo danh mục & Render Sản phẩm
 function renderCategories() {
     const container = document.getElementById('category-container');
     container.innerHTML = siteConfig.categories.map(c => 
@@ -179,10 +254,9 @@ function filterProducts() {
     const grid = document.getElementById('product-container');
     const featured = document.getElementById('featured-container');
     const noResult = document.getElementById('no-result');
-    
     const term = currentSearch.trim().toLowerCase();
     
-    // Lọc
+    // Lọc theo keyword & category
     let filtered = products.filter(p => {
         const matchCat = currentCategory === 'all' || p.category === currentCategory;
         const matchSearch = p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term);
@@ -196,59 +270,50 @@ function filterProducts() {
     }
     noResult.classList.add('hidden');
 
-    // Tách Featured
-    const featuredProduct = filtered.find(p => p.isFeatured);
-    const normalProducts = filtered.filter(p => !p.isFeatured);
+    const featuredProduct = filtered.find(p => p.featured);
+    const normalProducts = filtered.filter(p => !p.featured);
 
-    // Hiển thị
     featured.innerHTML = featuredProduct ? createCardHTML(featuredProduct, true) : '';
     grid.innerHTML = normalProducts.map(p => createCardHTML(p)).join('');
+
+    // Gắn sự kiện tracking click cho các card vừa tạo
+    document.querySelectorAll('.track-btn').forEach(card => {
+        card.addEventListener('click', function(e) {
+            if(this.getAttribute('href') !== 'javascript:void(0)') {
+                trackClick(this.getAttribute('data-id'));
+            }
+        });
+    });
 }
 
-// 5. Search & Dark Mode & Back to top
+// 5. Thanh Tìm Kiếm & Dark Mode
 document.getElementById('search-input').addEventListener('input', (e) => {
     currentSearch = e.target.value;
     filterProducts();
 });
 
 const themeBtn = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-    themeBtn.innerHTML = "<i class='bx bx-sun'></i>";
+if(themeBtn) {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeBtn.innerHTML = "<i class='bx bx-sun'></i>";
+    }
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeBtn.innerHTML = isDark ? "<i class='bx bx-sun'></i>" : "<i class='bx bx-moon'></i>";
+    });
 }
 
-themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    themeBtn.innerHTML = isDark ? "<i class='bx bx-sun'></i>" : "<i class='bx bx-moon'></i>";
-});
-
-const bttBtn = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) bttBtn.classList.add('show');
-    else bttBtn.classList.remove('show');
-});
-bttBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Khởi chạy
+// Chạy các tính năng khi load xong web
 document.addEventListener('DOMContentLoaded', () => {
-    initSite();
+    initProfile();
     renderCategories();
     filterProducts();
 });
-er Danh sách sản phẩm
-function filterProducts() {
-    const container = document.getElementById('product-container');
-    const noResult = document.getElementById('no-result');
-    
-    // Lọc theo category và search
-    const filtered = CONFIG.products.filter(p => {
-        const matchCategory = currentCategory === "all" || p.category === currentCategory;
-        const matchSearch = p.name.toLowerCase().includes(currentSearch) || p.description.toLowerCase().includes(currentSearch);
+) || p.description.toLowerCase().includes(currentSearch);
         return matchCategory && matchSearch;
     });
 

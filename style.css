@@ -395,3 +395,19 @@ footer {
     z-index: 50;
 }
 #back-to-top.show { opacity: 1; visibility: visible; }
+/* Fix tràn ngang và hiển thị trên mobile */
+body {
+    overflow-x: hidden;
+}
+.app-container {
+    overflow: hidden; 
+    width: 100%;
+}
+@media (max-width: 380px) {
+    .product-grid { 
+        grid-template-columns: 1fr; /* Màn hình nhỏ (360px) tự động chuyển về 1 cột */
+    }
+}
+.category-nav {
+    -webkit-overflow-scrolling: touch; /* Giúp cuộn ngang trên iOS mượt mà */
+}
